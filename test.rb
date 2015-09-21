@@ -1,6 +1,7 @@
 require 'minitest/autorun'
 require 'minitest/pride'
 require './current_observation'
+require './sun_rise_set.rb'
 require 'json'
 
 # class CurrentObservation
@@ -24,4 +25,12 @@ class CurrentTest < Minitest::Test
   def test_current_visability
     assert_equal "10.0", CurrentObservation.new(27613).current_visability_mi
   end
+
+
+  def test_sunrise_and_sunset
+     assert_equal "7:01 a.m.", SunRiseSet.new(27613).sun_rise
+     assert_equal "19:13 p.m.", SunRiseSet.new(27613).sun_set
+   end
+
+
 end
