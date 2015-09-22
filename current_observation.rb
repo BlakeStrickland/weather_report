@@ -1,4 +1,4 @@
-# require 'httparty'
+require 'httparty'
 
 class CurrentObservation
   def initialize(zip_code)
@@ -22,17 +22,17 @@ class CurrentObservation
     @response["current_observation"]["visibility_mi"]
   end
   private def get_response
-    # key = ENV['WUNDERGROUND_KEY']
-    # HTTParty.get("http://api.wunderground.com/api/#{key}/conditions/q/#{@zip_code}.json")
+    key = ENV['WUNDERGROUND_KEY']
+    HTTParty.get("http://api.wunderground.com/api/#{key}/conditions/q/#{@zip_code}.json")
 
-    file = File.read('current_observation.json')
-    data_hash = JSON.parse(file)
+    # file = File.read('current_observation.json')
+    # data_hash = JSON.parse(file)
   end
 end
 
 # puts "Enter your zip code"
 # api = CurrentObservation.new(gets.chomp)
-# puts api.current_temp
-# puts api.current_wind
-# puts api.current_weather
-# puts api.current_visability_mi
+# puts "Your current tempurature is; #{api.current_temp}"
+# puts "The current wind is; #{api.current_wind}"
+# puts "The current condition is; #{api.current_weather}"
+# puts "The current visability is; #{api.current_visability_mi}"

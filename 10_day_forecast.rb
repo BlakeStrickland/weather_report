@@ -1,4 +1,5 @@
-require 'json'
+require 'httparty'
+
 class TenDayForecast
   def initialize(zip_code)
     @zip_code = zip_code
@@ -6,7 +7,6 @@ class TenDayForecast
   end
 
   def ten_day_conditions
-    # binding.pry
     simplified = {}
     @response["forecast"]["simpleforecast"]["forecastday"].each do |x|
       my_pretty = x['date']['monthname'].to_s + " " + x['date']['day'].to_s + ", " + x['date']['weekday'].to_s
@@ -16,8 +16,10 @@ class TenDayForecast
   end
 
   private def get_response
-    file = File.read('10_day_forecast.json')
-    data_hash = JSON.parse(file)
+    key = ENV['WUNDERGROUND_KEY']
+    HTTParty.get("http://api.wunderground.com/api/#{key}/forecast10day/q/#{@zip_code}.json")
+    # file = File.read('10_day_forecast.json')
+    # data_hash = JSON.parse(file)
   end
 end
 

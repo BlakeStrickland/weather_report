@@ -1,4 +1,5 @@
 require 'json'
+require 'httparty'
 
 class WeatherAlert
   def initialize(zip_code)
@@ -6,17 +7,9 @@ class WeatherAlert
     @response = get_response
   end
 
-
-  # def weather_alerts
-  #   @response["alerts"][0]["description"]
-  # end
-
-
   def weather_alerts
-    # binding.pry
     simplified = []
     @response["alerts"].each do |x|
-      #my_pretty = x["stormName_Nice"].to_s
       simplified << x["description"]
     end
     simplified
@@ -24,10 +17,19 @@ class WeatherAlert
 
 
   private def get_response
-  file = File.read('weather_alert.json')
-    data_hash = JSON.parse(file)
+    key = ENV['WUNDERGROUND_KEY']
+    HTTParty.get("http://api.wunderground.com/api/#{key}/alerts/q/#{@zip_code}.json")
+    # file = File.read('weather_alert.json')
+    # data_hash = JSON.parse(file)
   end
 end
-# 
-# api = WeatherAlert.new(27613)
-#  puts api.weather_alerts
+
+# puts "Enter your zip code"
+# x = gets.chomp
+#
+#   if x.empty? || nil
+#     puts "There are no current weather alerts in your area"
+#   else
+#     api = WeatherAlert.new(x)
+#     puts "Your current weather alerts are as follows; #{api.weather_alerts}"
+#   end

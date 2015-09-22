@@ -1,9 +1,10 @@
 require 'json'
+require 'httparty'
+
 class SunRiseSet
   def initialize(zip_code)
     @zip_code = zip_code
     @response = get_response
-
   end
 
   def sun_rise
@@ -15,12 +16,14 @@ class SunRiseSet
   end
 
   private def get_response
-    file = File.read('sun_rise_sun_set.json')
-    data_hash = JSON.parse(file)
+    key = ENV['WUNDERGROUND_KEY']
+    HTTParty.get("http://api.wunderground.com/api/#{key}/astronomy/q/#{@zip_code}.json")
+    # file = File.read('sun_rise_sun_set.json')
+    # data_hash = JSON.parse(file)
   end
 end
 
-
-# api = SunRiseSet.new(27613)
-# puts api.sun_rise
-# puts api.sun_set
+# puts "Enter your zip code"
+# api = SunRiseSet.new(gets.chomp)
+# puts "The sunrise is expected to be at; #{api.sun_rise}"
+# puts "The sunset is expected to be at; #{api.sun_set}"
