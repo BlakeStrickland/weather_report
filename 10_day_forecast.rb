@@ -21,9 +21,9 @@ class TenDayForecast
   end
 end
 
-puts "Enter your zip code"
-api = TenDayForecast.new(gets.chomp)
-results = api.ten_day_conditions
-results.each do |x, y|
-  puts "#{x}: #{y}"
-end
+# puts "Enter your zip code"
+# api = TenDayForecast.new(gets.chomp)
+# results = api.ten_day_conditions
+# results.each do |x, y|
+#   puts "#{x}: #{y}"
+# end

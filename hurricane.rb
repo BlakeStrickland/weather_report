@@ -12,10 +12,8 @@ class Hurricanes
 
 
   def hurricane_info
-    # binding.pry
     simplified = []
     @response["currenthurricane"].each do |x|
-      #my_pretty = x["stormName_Nice"].to_s
       simplified << x["stormInfo"]["stormName"]
     end
     simplified

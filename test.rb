@@ -2,6 +2,7 @@ require 'minitest/autorun'
 require 'minitest/pride'
 require './current_observation'
 require './sun_rise_set.rb'
+require './10_day_forecast'
 require 'json'
 
 # class CurrentObservation
@@ -24,6 +25,21 @@ class CurrentTest < Minitest::Test
   end
   def test_current_visability
     assert_equal "10.0", CurrentObservation.new(27613).current_visability_mi
+  end
+
+  def test_10_day
+    a = {"September 21, Monday" => "Chance of a Thunderstorm",
+        "September 22, Tuesday" => "Overcast",
+        "September 23, Wednesday" => "Mostly Cloudy",
+        "September 24, Thursday" => "Chance of Rain",
+        "September 25, Friday" => "Rain",
+        "September 26, Saturday" => "Rain",
+        "September 27, Sunday" => "Rain",
+        "September 28, Monday" => "Clear",
+        "September 29, Tuesday" => "Clear",
+        "September 30, Wednesday" => "Clear"
+      }
+      assert_equal a, TenDayForecast.new(27613).ten_day_conditions
   end
 
 
