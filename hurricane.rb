@@ -6,20 +6,20 @@ class Hurricanes
     @response = get_response
   end
 
-  def hurricane_info
-    @response["currenthurricane"].first["stormInfo"]["stormName"]
-  end
-
-
   # def hurricane_info
-  #   # binding.pry
-  #   simplified = {}
-  #   @response["currenthurricane"].each do |x|
-  #     my_pretty = x["stormName_Nice"].to_s
-  #     simplified[my_pretty] = x["stormNumber"]
-  #   end
-  #   simplified
+  #   @response["currenthurricane"].first["stormInfo"]["stormName"]
   # end
+
+
+  def hurricane_info
+    # binding.pry
+    simplified = []
+    @response["currenthurricane"].each do |x|
+      #my_pretty = x["stormName_Nice"].to_s
+      simplified << x["stormInfo"]["stormName"]
+    end
+    simplified
+  end
 
 
 
