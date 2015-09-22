@@ -1,0 +1,89 @@
+
+{
+  "response": {
+  "version":"0.1",
+  "termsofService":"http://www.wunderground.com/weather/api/d/terms.html",
+  "features": {
+  "alerts": 1
+  }
+	}
+		,"query_zone": "023",
+	"alerts": [
+		{
+		"type": "WAT",
+		"description": "Areal Flood Advisory, Flash Flood Watch",
+		"date": "3:52 PM MST on September 21, 2015",
+		"date_epoch": "1442872320",
+		"expires": "9:00 PM MST on September 21, 2015",
+		"expires_epoch": "1442894400",
+		"tz_short":"MDT",
+		"tz_long":"America/Denver",
+		"message": "\u000A...The Flood Advisory remains in effect until 530 PM MST for east\u000Acentral La Paz and northwestern Maricopa counties...\u000A\u000AAt 348 PM MST...Doppler radar indicated heavy rain has moved east of \u000Athe advisory area. However...up to an inch and a half of rain has \u000Afallen in the advisory area...with minor flooding along Highway 60 \u000Aand Eagle eye Road. \u000A\u000ASome locations that will experience flooding include...\u000AAguila...gladden...Wenden and Salome. \u000A\u000APrecautionary/preparedness actions...\u000A\u000AMost flood deaths occur in automobiles. Never drive your vehicle into\u000Aareas where the water covers the roadway. Flood waters are usually\u000Adeeper than they appear. Just one foot of flowing water is powerful\u000Aenough to sweep vehicles off the Road. When encountering flooded\u000Aroads make the smart choice...turn around...dont drown.\u000A\u000AExcessive runoff from heavy rainfall will cause flooding of small\u000Acreeks and streams...as well as farm and country roads. Do not\u000Aattempt to travel across flooded roads. Find alternate routes.\u000A\u000A\u000ALat...Lon 3406 11333 3400 11332 3399 11308 3355 11318\u000A 3358 11339 3379 11364 3389 11363 3407 11339\u000A\u000A\u000A18\u000A\u000A\u000A1146 am MST Mon Sep 21 2015 /1146 am PDT Mon Sep 21 2015/\u000A\u000A...Flash Flood Watch now in effect until 9 PM MST /9 PM PDT/ this\u000Aevening...\u000A\u000AThe Flash Flood Watch issued earlier through Tuesday afternoon has\u000Abeen updated...and will continue only through Monday evening across\u000Asoutheast California...southwest...and south central Arizona. \u000A\u000AThe tropical depression and heavy wide-spread rain potential has\u000Amoved into eastern Arizona. Therefore wide-spread heavy rain or\u000Aexcessive rainfall is no longer a threat. However...an extra-\u000AOrdinary amount of moisture covers the region...and any afternoon\u000Athunderstorms have the potential to produce locally heavy rain in\u000Athe 1 to 2 inch range. Therefore the Flash Flood Watch will continue\u000Auntil after dark when the thunderstorm potential ends. The Flash\u000AFlood Watch for Tuesday is also canceled.\u000A\u000A\u000AThe Flash Flood Watch is now in effect for\u000A\u000A* portions of Arizona and California...including the following in ...\u000A Arizona...greater Phoenix area...lower Colorado River valley AZ...\u000A northwest Maricopa County...northwest and north central Pinal \u000A County...southwest deserts...southwest Maricopa County...west \u000A central deserts and Yuma/Martinez Lake and vicinity. In \u000A California...Imperial County...Joshua Tree National Park...lower \u000A Colorado River valley CA and Riverside County/eastern deserts.\u000A\u000A* Until 9 PM MST /9 PM PDT/ this evening\u000A\u000A* an extaordinary amount of tropical moisture covers the region...\u000A and any thunderstorms have the potential to produce locally heavy\u000A rain in the 1 to 2 inch range. Therefore there is the potential\u000A for localized flood or flash flooding.\u000A\u000APrecautionary/preparedness actions...\u000A\u000AA Flash Flood Watch means that flooding of washes...creeks and other\u000Adrainage areas is possible within the watch area. Residents and\u000Amotorists living or traveling in flood prone areas should concern\u000Athemselves with this flood potential. If you are in the watch area...\u000Ayou should watch the weather and be prepared to take immediate action\u000Ashould heavy rain and flooding occur or a Flash Flood Warning be\u000Aissued.\u000A\u000A\u000AStay up-to-date on the latest forecasts by listening to weather radio\u000Aon the public service band. More detailed information is available\u000Afrom the National Weather Service in Phoenix on the internet at\u000A\u000AWeather.Gov/Phoenix\u000A\u000AStay up-to-date on the latest forecasts by listening to weather radio\u000Aon the public service band. More detailed information is available\u000Afrom the National Weather Service in Phoenix on the internet at\u000A\u000AWeather.Gov/Phoenix\u000A\u000A\u000A\u000A\u000A",
+		"phenomena": "FF",
+		"significance": "A",
+		"ZONES": [
+		{
+		"state":"AZ",
+		"ZONE":"020"
+		}
+		,
+		{
+		"state":"AZ",
+		"ZONE":"021"
+		}
+		,
+		{
+		"state":"AZ",
+		"ZONE":"022"
+		}
+		,
+		{
+		"state":"AZ",
+		"ZONE":"025"
+		}
+		,
+		{
+		"state":"AZ",
+		"ZONE":"026"
+		}
+		,
+		{
+		"state":"AZ",
+		"ZONE":"027"
+		}
+		,
+		{
+		"state":"AZ",
+		"ZONE":"028"
+		}
+		,
+		{
+		"state":"CA",
+		"ZONE":"030"
+		}
+		,
+		{
+		"state":"CA",
+		"ZONE":"031"
+		}
+		,
+		{
+		"state":"CA",
+		"ZONE":"032"
+		}
+		,
+		{
+		"state":"CA",
+		"ZONE":"033"
+		}
+		,
+		{
+		"state":"AZ",
+		"ZONE":"023"
+		}
+		],
+		"StormBased": {
+		}
+		}
+	]
+}
