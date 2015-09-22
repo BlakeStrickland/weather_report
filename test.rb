@@ -7,11 +7,36 @@ require './weather_alert'
 require './hurricane.rb'
 require 'json'
 
-# class CurrentObservation
-#   private def get_response
-#     @read = File.read("current_observation.json")
-#   end
-# end
+class CurrentObservation
+  private def get_response
+    file = File.read('current_observation.json')
+    data_hash = JSON.parse(file)
+  end
+end
+class TenDayForecast
+  private def get_response
+    file = File.read('10_day_forecast.json')
+    data_hash = JSON.parse(file)
+  end
+end
+class Hurricanes
+  private def get_response
+    file = File.read('hurricanes.json')
+    data_hash = JSON.parse(file)
+  end
+end
+class WeatherAlert
+  private def get_response
+    file = File.read('weather_alert.json')
+    data_hash = JSON.parse(file)
+  end
+end
+class SunRiseSet
+  private def get_response
+    file = File.read('sun_rise_sun_set.json')
+    data_hash = JSON.parse(file)
+  end
+end
 
 
 class CurrentTest < Minitest::Test
@@ -59,7 +84,7 @@ class CurrentTest < Minitest::Test
 
   def test_hurricanes
     a = ["Ida","Twentyone","Sixteen-E","Malia","96C"]
-    assert_equal a, Hurricanes.new(27613).hurricane_info
+    assert_equal a, Hurricanes.new().hurricane_info
   end
 
 end
