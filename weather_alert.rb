@@ -28,6 +28,6 @@ class WeatherAlert
     data_hash = JSON.parse(file)
   end
 end
-
-api = WeatherAlert.new(27613)
- puts api.weather_alerts
+# 
+# api = WeatherAlert.new(27613)
+#  puts api.weather_alerts

@@ -21,6 +21,6 @@ class SunRiseSet
 end
 
 
-api = SunRiseSet.new(27613)
-puts api.sun_rise
-puts api.sun_set
+# api = SunRiseSet.new(27613)
+# puts api.sun_rise
+# puts api.sun_set

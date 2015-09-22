@@ -27,6 +27,6 @@ class Hurricanes
     data_hash = JSON.parse(file)
   end
 end
-
-api = Hurricanes.new(27613)
-puts api.hurricane_info
+# 
+# api = Hurricanes.new(27613)
+# puts api.hurricane_info

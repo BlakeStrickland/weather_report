@@ -4,6 +4,7 @@ require './current_observation'
 require './sun_rise_set.rb'
 require './10_day_forecast'
 require './weather_alert'
+require './hurricane.rb'
 require 'json'
 
 # class CurrentObservation
@@ -56,5 +57,9 @@ class CurrentTest < Minitest::Test
     assert_equal a,WeatherAlert.new(27613).weather_alerts
   end
 
+  def test_hurricanes
+    a = ["Ida","Twentyone","Sixteen-E","Malia","96C"]
+    assert_equal a, Hurricanes.new(27613).hurricane_info
+  end
 
 end
